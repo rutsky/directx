@@ -46,13 +46,16 @@ int WINAPI WinMain(HINSTANCE hInstance,
     wc.lpfnWndProc = WindowProc;
     wc.hInstance = hInstance;
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);
-    wc.lpszClassName = L"WindowClass";
+    //wc.lpszClassName = L"WindowClass";
+    wc.lpszClassName = "WindowClass";
 
     RegisterClassEx(&wc);
 
     hWnd = CreateWindowEx(NULL,
-                          L"WindowClass",
-                          L"Our Direct3D Program",
+                          //L"WindowClass",
+                          "WindowClass",
+                          //L"Our Direct3D Program",
+                          "Our Direct3D Program",
                           WS_OVERLAPPEDWINDOW,
                           0, 0,
                           SCREEN_WIDTH, SCREEN_HEIGHT,
